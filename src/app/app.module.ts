@@ -7,6 +7,8 @@ import { UserComponent } from './user/user.component';
 import { ReposComponent } from './repos/repos.component';
 import { CommitsComponent } from './commits/commits.component';
 import { SharedModule } from './shared/shared.module';
+import { CommitViewComponent } from './commit-view/commit-view.component';
+import { RepoViewComponent } from './repo-view/repo-view.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { SharedModule } from './shared/shared.module';
     UserComponent,
     ReposComponent,
     ReposComponent,
-    CommitsComponent
+    CommitsComponent,
+    CommitViewComponent,
+    RepoViewComponent
   ],
   imports: [
     BrowserModule,
