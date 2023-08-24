@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { GithubUser } from '../../models/github-user';
+import { GithubRepo } from '../../models/github-repo';
+import { GithubCommit } from '../../models/github-commit';
 
 @Injectable({
   providedIn: 'root'
@@ -17,5 +19,13 @@ export class GithubApiService {
 
   public getUser(user: string) : Promise<GithubUser|undefined> {
     return this.http.get<GithubUser>(this.formURL(`users/${user}`)).toPromise();
+  }
+
+  public getRepos(githubUser: GithubUser) : Promise<GithubRepo[]|undefined> {
+    return this.http.get<GithubRepo[]>(githubUser.repos_url).toPromise();
+  }
+
+  public getCommits(githubRepo: GithubRepo) : Promise<GithubCommit[]|undefined> {
+    return this.http.get<GithubCommit[]>(githubRepo.commits_url).toPromise();
   }
 }
