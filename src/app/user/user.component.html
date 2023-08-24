@@ -1,0 +1,7 @@
+<ng-container *ngIf="githubUser">
+    <div class="container-fluid pt-3">
+        <h1>{{githubUser.login}}</h1>
+        <img class="github-user-img" [src]="githubUser.avatar_url">
+    </div>
+</ng-container>
+
