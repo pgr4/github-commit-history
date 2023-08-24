@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { GithubCommit } from '../shared/models/github-commit';
 
 @Component({
   selector: 'app-commits',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./commits.component.css']
 })
 export class CommitsComponent {
-
+  @Input() public githubCommits: GithubCommit[] | undefined;
+  @Output() public githubCommitSelectedEvent = new EventEmitter<GithubCommit>();
 }

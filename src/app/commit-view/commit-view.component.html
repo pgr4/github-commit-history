@@ -1,1 +1,5 @@
-<p>commit-view works!</p>
+<ng-container *ngIf="githubCommit">
+    <div class="github-commit-container" (click)="onClick()">
+        {{githubCommit.sha}}
+    </div>
+</ng-container>

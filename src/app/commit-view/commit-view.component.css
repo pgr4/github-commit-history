@@ -1,0 +1,7 @@
+.github-commit-container {
+    cursor: pointer;
+}
+
+.github-commit-container.selected {
+    border: red solid 1px;
+}

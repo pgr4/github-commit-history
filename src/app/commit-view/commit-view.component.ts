@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { GithubCommit } from '../shared/models/github-commit';
 
 @Component({
   selector: 'app-commit-view',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./commit-view.component.css']
 })
 export class CommitViewComponent {
+  @Input() public githubCommit: GithubCommit|undefined;
+  @Output() public githubCommitSelectedEvent = new EventEmitter<GithubCommit>();
 
+  public onClick() {
+    this.githubCommitSelectedEvent.emit(this.githubCommit);
+  }
 }

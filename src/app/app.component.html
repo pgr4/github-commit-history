@@ -5,10 +5,10 @@
 </div>
 
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-md-2">
     <app-repos [githubRepos]="githubRepos" (githubRepoSelectedEvent)="githubRepo$.next($event)"></app-repos>
   </div>
-  <div class="col-md-6">
-    <app-commits></app-commits>
+  <div class="col-md-10">
+    <app-commits [githubCommits]="githubCommits" (githubCommitSelectedEvent)="githubCommit$.next($event)"></app-commits>
   </div>
 </div>
