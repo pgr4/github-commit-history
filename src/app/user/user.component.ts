@@ -1,25 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { GithubApiService } from '../shared/services/github-api/github-api.service';
+import { Component, Input, OnInit } from '@angular/core';
 import { GithubUser } from '../shared/models/github-user';
 
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
-  styleUrls: ['./user.component.css']
+  styleUrls: ['./user.component.css'],
 })
 export class UserComponent implements OnInit {
-  public githubUser: GithubUser|undefined;
-
-
-  constructor(private readonly githubApiService: GithubApiService) {
-
-  }
+  @Input() public githubUser: GithubUser | undefined;
 
   ngOnInit(): void {
-      this.githubApiService.getUser('pgr4')
-      .then(t => this.githubUser = t)
-      .catch(
-        // TODO: Do something here
-      )
   }
 }

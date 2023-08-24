@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { GithubRepo } from '../shared/models/github-repo';
 
 @Component({
   selector: 'app-repos',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./repos.component.css']
 })
 export class ReposComponent {
-
+   @Input() public githubRepos: GithubRepo[]|undefined;
 }
