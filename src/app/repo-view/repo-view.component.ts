@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { GithubRepo } from '../shared/models/github-repo';
 
 @Component({
@@ -8,4 +8,9 @@ import { GithubRepo } from '../shared/models/github-repo';
 })
 export class RepoViewComponent {
   @Input() public githubRepo: GithubRepo|undefined;
+  @Output() public githubRepoSelectedEvent = new EventEmitter<GithubRepo>();
+
+  public onClick() {
+    this.githubRepoSelectedEvent.emit(this.githubRepo);
+  }
 }

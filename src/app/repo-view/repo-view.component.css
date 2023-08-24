@@ -1,0 +1,7 @@
+.github-repo-container {
+    cursor: pointer;
+}
+
+.github-repo-container.selected {
+    border: red solid 1px;
+}

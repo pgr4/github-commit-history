@@ -19,10 +19,10 @@ export class AppComponent implements OnInit {
   private githubUser$: Subject<GithubUser | undefined> = new Subject<
     GithubUser | undefined
   >();
-  private githubRepo$: Subject<GithubRepo | undefined> = new Subject<
+  public githubRepo$: Subject<GithubRepo | undefined> = new Subject<
     GithubRepo | undefined
   >();
-  private githubCommit$: Subject<GithubCommit | undefined> = new Subject<
+  public githubCommit$: Subject<GithubCommit | undefined> = new Subject<
     GithubCommit | undefined
   >();
 

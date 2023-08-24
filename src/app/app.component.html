@@ -6,7 +6,7 @@
 
 <div class="row">
   <div class="col-md-6">
-    <app-repos [githubRepos]="githubRepos"></app-repos>
+    <app-repos [githubRepos]="githubRepos" (githubRepoSelectedEvent)="githubRepo$.next($event)"></app-repos>
   </div>
   <div class="col-md-6">
     <app-commits></app-commits>

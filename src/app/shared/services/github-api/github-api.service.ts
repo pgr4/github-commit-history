@@ -26,6 +26,6 @@ export class GithubApiService {
   }
 
   public getCommits(githubRepo: GithubRepo) : Promise<GithubCommit[]|undefined> {
-    return this.http.get<GithubCommit[]>(githubRepo.commits_url).toPromise();
+    return this.http.get<GithubCommit[]>(githubRepo.commits_url.replace('{/sha}', '')).toPromise();
   }
 }

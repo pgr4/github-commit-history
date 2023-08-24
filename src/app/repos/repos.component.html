@@ -1,3 +1,3 @@
 <div class="container-fluid pt-3">
-    <app-repo-view *ngFor="let githubRepo of githubRepos" [githubRepo]="githubRepo"></app-repo-view>
+    <app-repo-view *ngFor="let githubRepo of githubRepos" [githubRepo]="githubRepo" (githubRepoSelectedEvent)="githubRepoSelectedEvent.emit($event)"></app-repo-view>
 </div>

@@ -1,3 +1,5 @@
-<div>
-    {{githubRepo?.name}}
-</div>
+<ng-container *ngIf="githubRepo">
+    <div class="github-repo-container" (click)="onClick()">
+        {{githubRepo.name}}
+    </div>
+</ng-container>
