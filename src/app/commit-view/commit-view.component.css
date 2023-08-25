@@ -1,3 +1,7 @@
 .selected {
-    border: red solid 1px;
+  border: red solid 1px;
+}
+
+.card-text {
+  white-space: pre;
 }
