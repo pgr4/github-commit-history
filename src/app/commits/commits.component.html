@@ -1,3 +1,2 @@
-<div class="container-fluid pt-3">
-    <app-commit-view *ngFor="let githubCommit of githubCommits" [githubCommit]="githubCommit" (githubCommitSelectedEvent)="githubCommitSelectedEvent.emit($event)"></app-commit-view>
-</div>
+<h3>Commits</h3>
+<app-commit-view *ngFor="let githubCommit of githubCommits" [githubCommit]="githubCommit" (githubCommitSelectedEvent)="githubCommitSelectedEvent.emit($event)"></app-commit-view>

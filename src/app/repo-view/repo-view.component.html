@@ -1,5 +1,9 @@
 <ng-container *ngIf="githubRepo">
-    <div class="github-repo-container" (click)="onClick()">
-        {{githubRepo.name}}
+  <div class="github-repo-container container-fluid mt-3" (click)="onClick()">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{ githubRepo.name }}</h5>
+      </div>
     </div>
+  </div>
 </ng-container>
