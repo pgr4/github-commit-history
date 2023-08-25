@@ -22,9 +22,6 @@ export class AppComponent implements OnInit {
   public githubRepo$: Subject<GithubRepo | undefined> = new Subject<
     GithubRepo | undefined
   >();
-  public githubCommit$: Subject<GithubCommit | undefined> = new Subject<
-    GithubCommit | undefined
-  >();
 
   constructor(private readonly githubApiService: GithubApiService) {
     this.githubUser$.subscribe((t) => {

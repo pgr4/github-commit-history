@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { GithubUser } from '../shared/models/github-user';
 
 @Component({
@@ -8,6 +8,8 @@ import { GithubUser } from '../shared/models/github-user';
 })
 export class UserComponent implements OnInit {
   @Input() public githubUser: GithubUser | undefined;
+
+  public swapUserValue: string = "";
 
   ngOnInit(): void {
   }

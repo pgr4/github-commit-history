@@ -8,9 +8,4 @@ import { GithubCommit } from '../shared/models/github-commit';
 })
 export class CommitViewComponent {
   @Input() public githubCommit: GithubCommit|undefined;
-  @Output() public githubCommitSelectedEvent = new EventEmitter<GithubCommit>();
-
-  public onClick() {
-    this.githubCommitSelectedEvent.emit(this.githubCommit);
-  }
 }
