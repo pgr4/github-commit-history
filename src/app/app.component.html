@@ -8,6 +8,7 @@
     <div class="col-md-2">
       <app-repos
         [githubRepos]="githubRepos"
+        [selectedGithubRepo]="selectedGithubRepo"
         (githubRepoSelectedEvent)="githubRepo$.next($event)"
       ></app-repos>
     </div>

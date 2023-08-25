@@ -23,6 +23,8 @@ export class AppComponent implements OnInit {
     GithubRepo | undefined
   >();
 
+  public selectedGithubRepo: GithubRepo | undefined;
+
   constructor(private readonly githubApiService: GithubApiService) {
     this.githubUser$.subscribe((t) => {
       this.githubUser = t;
@@ -47,6 +49,8 @@ export class AppComponent implements OnInit {
           .catch()
       )
     ).subscribe();
+
+    this.githubRepo$.subscribe(t => this.selectedGithubRepo = t);
 
     this.githubApiService
       .getUser('pgr4')

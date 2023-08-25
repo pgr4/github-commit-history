@@ -2,6 +2,7 @@
     cursor: pointer;
 }
 
-.github-repo-container.selected {
-    border: red solid 1px;
+.selected {
+   background-color: red;
+   color: white;
 }

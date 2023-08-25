@@ -2,5 +2,6 @@
   <app-repo-view
     *ngFor="let githubRepo of githubRepos"
     [githubRepo]="githubRepo"
+    [selectedGithubRepo]="selectedGithubRepo"
     (githubRepoSelectedEvent)="githubRepoSelectedEvent.emit($event)"
   ></app-repo-view>

@@ -8,9 +8,14 @@ import { GithubRepo } from '../shared/models/github-repo';
 })
 export class RepoViewComponent {
   @Input() public githubRepo: GithubRepo|undefined;
+  @Input() public selectedGithubRepo: GithubRepo | undefined;
   @Output() public githubRepoSelectedEvent = new EventEmitter<GithubRepo>();
 
   public onClick() {
     this.githubRepoSelectedEvent.emit(this.githubRepo);
+  }
+
+  public get isSelected(): boolean {
+    return this.selectedGithubRepo?.id === this.githubRepo?.id
   }
 }

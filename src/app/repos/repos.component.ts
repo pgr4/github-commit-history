@@ -8,5 +8,6 @@ import { GithubRepo } from '../shared/models/github-repo';
 })
 export class ReposComponent {
   @Input() public githubRepos: GithubRepo[] | undefined;
+  @Input() public selectedGithubRepo: GithubRepo | undefined;
   @Output() public githubRepoSelectedEvent = new EventEmitter<GithubRepo>();
 }
