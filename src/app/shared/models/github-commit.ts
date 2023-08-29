@@ -12,7 +12,7 @@ export class GithubAuthor {
     constructor(
         public name: string,
         public email: string,
-        public date: string,
+        public date: Date,
     ) {}
 }
 
