@@ -1,8 +1,8 @@
 <ng-container *ngIf="githubRepo">
-  <div class="github-repo-container container-fluid mt-3" (click)="onClick()">
+  <div class="github-repo-container mt-3" (click)="onClick()">
     <div class="card">
       <div class="card-body" [ngClass]="{'bg-primary': isSelected, 'text-white': isSelected}">
-        <h5 class="card-title">{{ githubRepo.name }}</h5>
+        <h6 class="card-title">{{ githubRepo.name }}</h6>
       </div>
     </div>
   </div>
