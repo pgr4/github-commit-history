@@ -4,4 +4,10 @@
 
 .card-text {
   white-space: pre;
+  overflow-x: auto;
+  padding: 5px;
+}
+
+.card-title {
+  padding: 5px;
 }
