@@ -9,6 +9,7 @@ import { CommitsComponent } from './commits/commits.component';
 import { SharedModule } from './shared/shared.module';
 import { CommitViewComponent } from './commit-view/commit-view.component';
 import { RepoViewComponent } from './repo-view/repo-view.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { RepoViewComponent } from './repo-view/repo-view.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

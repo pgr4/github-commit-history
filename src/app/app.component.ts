@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   public githubCommits: GithubCommit[] | undefined;
   public title = 'github-commit-history';
 
-  private githubUser$: Subject<GithubUser | undefined> = new Subject<
+  public githubUser$: Subject<GithubUser | undefined> = new Subject<
     GithubUser | undefined
   >();
   public githubRepo$: Subject<GithubRepo | undefined> = new Subject<
