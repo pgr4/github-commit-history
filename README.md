@@ -1,3 +1,12 @@
+## Installation Steps
+
+1. git clone github-commit-history
+2. cd github-commit-history
+3. npm install
+4. npm run start
+
+## Default Readme Generation
+
 # GithubCommitHistory
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.4.
