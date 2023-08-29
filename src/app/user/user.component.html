@@ -36,7 +36,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Swap User</h5>
+          <h5 class="modal-title">Swap GitHub User</h5>
           <button
             type="button"
             class="close"
@@ -47,7 +47,8 @@
           </button>
         </div>
         <div class="modal-body">
-          <input type="text" class="form-control" [(ngModel)]="swapUserValue" />
+          <label style="font-weight: bold;">GitHub Login</label>
+          <input type="text" class="form-control" placeholder="pgr4" [(ngModel)]="swapUserValue" />
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary" (click)="save()">
