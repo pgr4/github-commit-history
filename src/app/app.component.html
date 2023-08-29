@@ -1,18 +1,18 @@
-<div class="container-fluid">
+<div class="container-md">
   <div class="row mt-3">
-    <div class="col-md-12">
+    <div class="col-12">
       <app-user [githubUser$]="githubUser$"></app-user>
     </div>
   </div>
   <div class="row mt-3">
-    <div class="col-md-2">
+    <div class="col-3">
       <app-repos
         [githubRepos]="githubRepos"
         [selectedGithubRepo]="selectedGithubRepo"
         (githubRepoSelectedEvent)="githubRepo$.next($event)"
       ></app-repos>
     </div>
-    <div class="col-md-10">
+    <div class="col-9">
       <app-commits
         [githubCommits]="githubCommits"
       ></app-commits>
