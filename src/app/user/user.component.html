@@ -1,23 +1,27 @@
 <ng-container *ngIf="githubUser">
   <h3>User</h3>
-  <div class="container-fluid mt-3">
-    <div class="card">
-      <div class="row">
-        <div class="col-md-2">
-          <img
-            class="card-img-left"
-            [src]="githubUser.avatar_url"
-            style="width: 100%; height: 100%"
-          />
-        </div>
-        <div class="col-md-10" style="padding: 5px">
-          <h5 class="card-title">{{ githubUser.login }}</h5>
-          <a [href]="githubUser.html_url" class="btn btn-primary"
-            >View on GitHub</a
-          >
-          <button class="btn btn-secondary m-1" (click)="openPopup()">
-            Swap User
-          </button>
+  <div class="card mt-3">
+    <div class="row">
+      <div class="col-2">
+        <img
+          class="card-img-left"
+          [src]="githubUser.avatar_url"
+          style="width: 100%; height: 100%"
+        />
+      </div>
+      <div class="col-10">
+        <div class="row">
+          <div class="col-6">
+            <h1 class="card-title">{{ githubUser.login }}</h1>
+          </div>
+          <div class="col-6" style="text-align: right">
+            <a [href]="githubUser.html_url" class="btn btn-primary"
+              >View on GitHub</a
+            >
+            <button class="btn btn-secondary m-1" (click)="openPopup()">
+              Swap User
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -46,8 +50,14 @@
           <input type="text" class="form-control" [(ngModel)]="swapUserValue" />
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" (click)="save()">Save</button>
-          <button type="button" class="btn btn-secondary" (click)="closePopup()">
+          <button type="button" class="btn btn-primary" (click)="save()">
+            Save
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            (click)="closePopup()"
+          >
             Cancel
           </button>
         </div>
